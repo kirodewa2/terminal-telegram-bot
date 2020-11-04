@@ -10,10 +10,10 @@ import os
 class Config(object):
     LOGGER = True
     # The Telegram API things
-    APP_ID = int(os.environ.get("924859", 12345))
-    API_HASH = os.environ.get("a4c9a18cf4d8cb24062ff6916597f832", None)
+    APP_ID = int(os.environ.get("APP_ID", 12345))
+    API_HASH = os.environ.get("API_HASH", None)
     # Get these values from my.telegram.org
-    TG_BOT_TOKEN = os.environ.get("1359766908:AAGTIyv57SYPLREmqHTgxo8Vw7OtR4r7LWw", None)
+    TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", None)
     # maximum message length in Telegram
     MAX_MESSAGE_LENGTH = 4096
     # This is required for the plugins involving the file system.
@@ -21,7 +21,7 @@ class Config(object):
     #
     TG_UPDATE_WORKERS_COUNT = int(os.environ.get("1", 1))
     # set to store users who are authorized to use the bot
-    AUTH_USERS = set(int(x) for x in os.environ.get("1002182448", "").split())
+    AUTH_USERS = set(int(x) for x in os.environ.get("AUTH_USERS", "").split())
     #
     # EVAL command trigger
     EVAL_CMD_TRIGGER = os.environ.get("EVAL_CMD_TRIGGER", "eval")
